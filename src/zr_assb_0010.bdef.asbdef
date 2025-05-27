@@ -1,0 +1,28 @@
+managed implementation in class zbp_r_assb_0010 unique;
+//strict ( 2 );
+
+define behavior for ZR_ASSB_0010 //alias <alias_name>
+persistent table zassbt0010
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+
+  field ( numbering : managed, readonly ) Uuid;
+  create;
+  update;
+  delete;
+
+  mapping for zassbt0010
+    {
+      uuid      = uuid;
+      werks     = werks;
+      bklas     = bklas;
+      zsfld     = zsfld;
+      ptyp      = ptyp;
+      fieldname = fieldname;
+      zsbgb     = zsbgb;
+      zsumc     = zsumc;
+      zdfgb     = zdfgb;
+    }
+}
