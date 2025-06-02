@@ -18,8 +18,10 @@ define root view entity ZC_ASSB_0010
         lineItem: [{position: 10 }],
         identification: [{position: 10 }]
       }
+      @Consumption.valueHelpDefinition: [{ entity: { name:'ZI_PLANT_01', element: 'Plant' } }]
   key Werks,
       @EndUserText.label: '평가클래스'
+      @Consumption.valueHelpDefinition: [{ entity: { name:'ZI_VCLASS_01', element: 'ValuationClass' } }]
       @UI: {
         lineItem: [{position: 20 }],
         identification: [{position: 20 }]
@@ -29,7 +31,10 @@ define root view entity ZC_ASSB_0010
       @UI: {
         lineItem: [{position: 30 }],
         identification: [{position: 30 }]
-      }
+      }     
+      @Consumption.valueHelpDefinition: [{ entity : {name: 'ZR_ASSB_0011S', element: 'Zsfld' },
+                                                additionalBinding: [   {localElement: 'Fieldname', element: 'Fieldname'},
+                                                                       {localElement: 'Zsbgb', element: 'Zsbgb'}] }]
   key Zsfld,
       @EndUserText.label: '범주'
       @UI: {
